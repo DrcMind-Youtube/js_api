@@ -9,18 +9,36 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <h1>Eye drop API</h1>
-        <button>Choisir une couleur</button>
-      </header>
+      <h1>Storage APi</h1>
+      <!-- form -->
+      <form id="form">
+        <div class="form-control">
+          <label for="title">Titre</label>
+          <input type="text" id="titre" placeholder="Saisir le titre" />
+        </div>
+        <div class="form-control">
+          <label for="author">Auteur</label>
+          <input
+            type="text"
+            id="auteur"
+            placeholder="Saisir l'auteur"
+            name="auteur"
+          />
+        </div>
 
-      <p>Couleur choisie :</p>
+        <button type="submit" class="btn">Ajouter un livre</button>
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
 
-      <!-- image au hazard -->
-      <img
-        src="https://images.unsplash.com/photo-1707343848610-16f9afe1ae23?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        width="500px"
-      />
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
